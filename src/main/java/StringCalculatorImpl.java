@@ -1,9 +1,18 @@
+import java.util.Scanner;
+
 public class StringCalculatorImpl implements  StringCalculator{
 
     private Calculator calculator;
-
     public StringCalculatorImpl(Calculator calculator) {
         this.calculator = calculator;
+    }
+
+    @Override
+    public void readLineAndCalculate() {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        System.out.print(calculateString(s));
+        scanner.close();
     }
 
     @Override
@@ -73,5 +82,10 @@ public class StringCalculatorImpl implements  StringCalculator{
         throw new IllegalArgumentException("유효하지 않은 숫자입니다.");
     }
 
+
+    public static void main(String[] args) {
+        StringCalculator sc = new StringCalculatorImpl(new CalculatorImpl());
+        sc.readLineAndCalculate();
+    }
 
 }
