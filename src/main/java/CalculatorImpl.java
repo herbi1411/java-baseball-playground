@@ -20,7 +20,7 @@ public class CalculatorImpl implements Calculator{
         return i / j;
     }
 
-    public static void main(String[] args) {
+    public static void main(StringCalculatorImpl[] args) {
         Calculator cal = new CalculatorImpl();
         System.out.println(cal.add(3, 4));
         System.out.println(cal.subtract(5, 4));
