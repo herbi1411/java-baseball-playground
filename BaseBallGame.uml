@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>baseball.BaseBallGame</OriginalElement>
+  <nodes>
+    <node x="481.3529411764705" y="-40.0">baseball.CheckInputIsAnswerLogicImpl</node>
+    <node x="-347.0" y="379.0">baseball.InputCheckInfo</node>
+    <node x="-21.0" y="313.0">baseball.CheckUserInputImpl</node>
+    <node x="-21.0" y="101.5">baseball.UserInputImpl</node>
+    <node x="483.0" y="95.0">baseball.InputResultViewImpl</node>
+    <node x="791.5294117647056" y="253.0">baseball.BaseBallNum</node>
+    <node x="-347.0" y="95.0">baseball.BaseBallGame</node>
+    <node x="481.3529411764705" y="253.0">baseball.GameDoneLogicImpl</node>
+    <node x="-21.0" y="-40.0">baseball.GenerateAnswerImpl</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic" zoom="0.7000000000000001" showDependencies="false" x="186.60084033613407" y="497.21008403361355" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
