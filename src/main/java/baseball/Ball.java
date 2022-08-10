@@ -1,5 +1,7 @@
 package baseball;
 
+import static baseball.StaticVariables.*;
+
 public class Ball {
     private final int position;
     private final int num;
@@ -7,25 +9,25 @@ public class Ball {
     public Ball(int position, int num) {
         this.position = position;
         this.num = num;
-        if (position < 0 || position > 2)
+        if (position < 0 || position >= BALL_NUM)
             throw new IllegalArgumentException("허용된 위치값을 초과했습니다.");
-        if (num < 1 || num > 9)
+        if (num < MIN_NUM || num > MAX_NUM)
             throw new IllegalArgumentException("허용된 숫자를 초과했습니다.");
     }
 
     public BallStatus ballStatus(Ball b) {
-        if (this.position == b.getPosition() && this.num == b.getNum())
+        if (b.samePosition(position) && b.sameNum(num))
             return BallStatus.STRIKE;
-        else if (this.num == b.getNum())
+        else if (b.sameNum(num))
             return BallStatus.BALL;
         return BallStatus.NOTHING;
     }
 
-    public int getPosition() {
-        return position;
+    public boolean samePosition(int p){
+        return this.position == p;
     }
 
-    public int getNum() {
-        return num;
+    public boolean sameNum(int num){
+        return this.num == num;
     }
 }
