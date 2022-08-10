@@ -1,5 +1,7 @@
 package baseball;
 
+import java.util.Objects;
+
 import static baseball.StaticVariables.*;
 
 public class Ball {
@@ -16,18 +18,22 @@ public class Ball {
     }
 
     public BallStatus ballStatus(Ball b) {
-        if (b.samePosition(position) && b.sameNum(num))
+        if (this.equals(b))
             return BallStatus.STRIKE;
         else if (b.sameNum(num))
             return BallStatus.BALL;
         return BallStatus.NOTHING;
     }
 
-    public boolean samePosition(int p){
-        return this.position == p;
-    }
-
     public boolean sameNum(int num){
         return this.num == num;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ball ball = (Ball) o;
+        return position == ball.position && num == ball.num;
     }
 }
